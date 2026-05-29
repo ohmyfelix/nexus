@@ -1,7 +1,10 @@
 <h1 align=center>Dockette / Nexus</h1>
 
 <p align=center>
-   🎁 Sonatype Nexus Repository Manager 3 with preinstalled community plugins
+   <a href="https://github.com/dockette/nexus/actions"><img src="https://github.com/dockette/nexus/actions/workflows/docker.yml/badge.svg" alt="GitHub Actions"></a>
+   <a href="https://hub.docker.com/r/dockette/nexus"><img src="https://img.shields.io/docker/pulls/dockette/nexus.svg" alt="Docker Hub pulls"></a>
+   <a href="https://github.com/sponsors/f3l1x"><img src="https://img.shields.io/badge/sponsor-GitHub%20Sponsors-ea4aaa" alt="GitHub Sponsors"></a>
+   <a href="https://github.com/orgs/dockette/discussions"><img src="https://img.shields.io/badge/support-discussions-6f42c1" alt="Support/Discussions"></a>
 </p>
 
 <p align=center>
@@ -9,9 +12,7 @@
 </p>
 
 <p align=center>
-  <a href="https://hub.docker.com/r/dockette/nexus/"><img src="https://badgen.net/docker/pulls/dockette/nexus"></a>
-  <a href="https://bit.ly/ctteg"><img src="https://badgen.net/badge/support/gitter/cyan"></a>
-  <a href="https://github.com/sponsors/f3l1x"><img src="https://badgen.net/badge/sponsor/donations/F96854"></a>
+   🎁 Sonatype Nexus Repository Manager 3 with preinstalled community plugins
 </p>
 
 ![](https://github.com/dockette/nexus/blob/master/.docs/nexus.png "Nexus")
@@ -57,16 +58,6 @@ Default repositories are disabled. Nexus is completly clean by default.
     <img width="700" src="https://github.com/dockette/nexus/blob/master/.docs/blobstores.png">
 </p>
 
-## Development
+## Maintenance
 
-See [how to contribute](https://contributte.org/contributing.html) to this package.
-
-This package is currently maintaining by these authors.
-
-<a href="https://github.com/f3l1x">
-    <img width="80" height="80" src="https://avatars2.githubusercontent.com/u/538058?v=3&s=80">
-</a>
-
------
-
-Consider to [support](https://github.com/sponsors/f3l1x) **f3l1x**. Also thank you for using this package.
+See [how to contribute](https://github.com/dockette/.github/blob/master/CONTRIBUTING.md) to this package. Consider to [support](https://github.com/sponsors/f3l1x) **f3l1x**. Thank you for using this package.
