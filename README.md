@@ -12,7 +12,7 @@
 </p>
 
 <p align=center>
-   🎁 Sonatype Nexus Repository Manager 3 with preinstalled community plugins
+   🎁 Clean Sonatype Nexus Repository Manager 3 image
 </p>
 
 ![](https://github.com/dockette/nexus/blob/master/.docs/nexus.png "Nexus")
@@ -25,33 +25,43 @@
 docker run -it --rm -p 8081:8081 -v $(pwd)/data:/nexus-data dockette/nexus:3.82.1-java17-ubi
 ```
 
+Published images are version-tagged. The workflow publishes `dockette/nexus:3.82.1-java17-ubi`, not `dockette/nexus:latest`; the Makefile uses `DOCKER_TAG=latest` only as a local build default.
+
+Nexus can take several minutes to start. The test target waits up to `DOCKER_TEST_TIMEOUT=600` seconds before failing. When running the container via `make run`, read the initial admin password with:
+
+```
+make run-password
+```
+
 ## Documentation
 
-This is Nexus 3 OSS build with full-features community plugins.
+This is a Nexus 3 OSS build with the default repositories disabled, so Nexus starts completely clean.
 
-**Community repositories** (`3.78+`)
+Community plugins are not preinstalled. The Dockerfile keeps commented plugin download and copy steps as optional staging examples; enable them only after verifying compatibility with the selected Nexus version.
 
-- WIP
+**Optional community repositories** (`3.78+`)
 
-**Community repositories** (`<3.71`)
+- No verified optional repository plugins are documented for this version yet.
+
+**Optional community repositories** (`<3.71`)
 
 - apk
+- cargo
 - composer
 - cpan
 - puppet
 
 **Defaults**
 
-Default repositories are disabled. Nexus is completly clean by default.
+Default repositories are disabled. Nexus is completely clean by default.
 
 <p>
     <img width="350" src="https://github.com/dockette/nexus/blob/master/.docs/repos1.png">
     <img width="350" src="https://github.com/dockette/nexus/blob/master/.docs/repos2.png">
 </p>
 
-**Community blobstores**
+**Optional community blobstores**
 
-- azure
 - google
 
 <p>
@@ -60,4 +70,4 @@ Default repositories are disabled. Nexus is completly clean by default.
 
 ## Maintenance
 
-See [how to contribute](https://github.com/dockette/.github/blob/master/CONTRIBUTING.md) to this package. Consider to [support](https://github.com/sponsors/f3l1x) **f3l1x**. Thank you for using this package.
+See [how to contribute](https://github.com/dockette/.github/blob/master/CONTRIBUTING.md) to this package. Consider [supporting](https://github.com/sponsors/f3l1x) **f3l1x**. Thank you for using this package.
